@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DDG Barbershop | Barbería</title>
+  <meta name="description" content="DDG Barbershop — cortes, fades, barba y estilo clásico. Reserva tu cita en línea.">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#inicio" class="nav__brand">
+      <img src="img/logo.jpg" alt="DDG Barbershop">
+      <span>DDG <b>Barbershop</b></span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#reservar" class="btn btn--gold btn--sm">Reservar</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <img src="img/logo.jpg" alt="Logo DDG Barbershop" class="hero__logo">
+      <p class="script">Nunca es suerte, siempre es Dios.</p>
+      <h1>Estilo de rey,<br><span>corte de barbero</span></h1>
+      <p class="hero__sub">Fades, diseños, barba y ritual de toalla caliente. Reserva en 30 segundos y llega directo a la silla.</p>
+      <div class="hero__cta">
+        <a href="#reservar" class="btn btn--gold">Reservar cita</a>
+        <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
+      </div>
+      <div class="hero__status" id="openStatus"></div>
+    </div>
+    <a href="#servicios" class="hero__scroll" aria-label="Bajar"></a>
+  </section>
+
+  <!-- ============ STRIP ============ -->
+  <div class="strip">
+    <div class="strip__track">
+      <span>Fade</span><i>✦</i><span>Taper</span><i>✦</i><span>Mullet</span><i>✦</i><span>Diseños</span><i>✦</i><span>Barba</span><i>✦</i><span>Cejas</span><i>✦</i><span>Tintes</span><i>✦</i>
+      <span>Fade</span><i>✦</i><span>Taper</span><i>✦</i><span>Mullet</span><i>✦</i><span>Diseños</span><i>✦</i><span>Barba</span><i>✦</i><span>Cejas</span><i>✦</i><span>Tintes</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <header class="section__head">
+        <p class="script">Lo que hacemos</p>
+        <h2>Servicios &amp; precios</h2>
+        <p>Elige tu servicio y resérvalo con un clic.</p>
+      </header>
+      <div class="tabs" id="serviceTabs">
+        <button class="tab active" data-cat="todos">Todos</button>
+        <button class="tab" data-cat="corte">Cortes</button>
+        <button class="tab" data-cat="barba">Barba</button>
+        <button class="tab" data-cat="combo">Combos</button>
+        <button class="tab" data-cat="extra">Extras</button>
+      </div>
+      <div class="services" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ NOSOTROS ============ -->
+  <section class="section section--alt" id="nosotros">
+    <div class="container about">
+      <div class="about__img reveal">
+        <img src="img/barberia.jpg" alt="Interior de DDG Barbershop">
+        <div class="about__badge"><b>+5</b><span>años de<br>experiencia</span></div>
+      </div>
+      <div class="about__text reveal">
+        <p class="script">Nuestra casa</p>
+        <h2>Más que un corte,<br>una experiencia</h2>
+        <p>En DDG Barbershop combinamos la barbería clásica con las tendencias urbanas. Cada cliente se va con un corte pensado para su rostro, su estilo y su día a día.</p>
+        <ul class="checks">
+          <li>Herramientas desinfectadas en cada servicio</li>
+          <li>Productos profesionales para cabello y barba</li>
+          <li>Ambiente cómodo, buena música y cero apuro</li>
+          <li>Atención por reserva o por orden de llegada</li>
+        </ul>
+        <div class="stats">
+          <div><b data-count="4800">0</b><span>Cortes</span></div>
+          <div><b data-count="4.9" data-decimals="1">0</b><span>Valoración</span></div>
+          <div><b data-count="3">0</b><span>Barberos</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EQUIPO ============ -->
+  <section class="section" id="equipo">
+    <div class="container">
+      <header class="section__head">
+        <p class="script">Las manos detrás del corte</p>
+        <h2>Nuestro equipo</h2>
+      </header>
+      <div class="team" id="teamGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ RESERVAR ============ -->
+  <section class="section section--alt" id="reservar">
+    <div class="container booking">
+      <div class="booking__info">
+        <p class="script">Sin colas, sin esperas</p>
+        <h2>Reserva tu cita</h2>
+        <p>Completa los datos, elige el horario disponible y confirma. Te mostraremos un comprobante y podrás enviarlo por WhatsApp.</p>
+        <div class="summary" id="summary">
+          <h4>Resumen</h4>
+          <div class="summary__row"><span>Servicio</span><b id="sumService">—</b></div>
+          <div class="summary__row"><span>Barbero</span><b id="sumBarber">—</b></div>
+          <div class="summary__row"><span>Fecha</span><b id="sumDate">—</b></div>
+          <div class="summary__row"><span>Hora</span><b id="sumTime">—</b></div>
+          <div class="summary__row summary__total"><span>Total</span><b id="sumPrice">S/ 0</b></div>
+        </div>
+        <button class="btn btn--ghost btn--sm" id="openMyBookings">Ver mis reservas (<span id="bookingCount">0</span>)</button>
+      </div>
+
+      <form class="form" id="bookingForm" novalidate>
+        <div class="field">
+          <label for="fService">Servicio</label>
+          <select id="fService" required></select>
+        </div>
+        <div class="field">
+          <label>Barbero</label>
+          <div class="chips" id="barberChips"></div>
+        </div>
+        <div class="field">
+          <label for="fDate">Fecha</label>
+          <input type="date" id="fDate" required>
+        </div>
+        <div class="field">
+          <label>Hora disponible</label>
+          <div class="slots" id="slots"><p class="muted">Primero elige una fecha.</p></div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="fName">Nombre</label>
+            <input type="text" id="fName" placeholder="Tu nombre" required>
+          </div>
+          <div class="field">
+            <label for="fPhone">Celular</label>
+            <input type="tel" id="fPhone" placeholder="9XX XXX XXX" maxlength="11" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="fNote">Nota (opcional)</label>
+          <textarea id="fNote" rows="2" placeholder="Ej: fade bajo con diseño en el lado izquierdo"></textarea>
+        </div>
+        <p class="form__error" id="formError"></p>
+        <button type="submit" class="btn btn--gold btn--block">Confirmar reserva</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ OPINIONES ============ -->
+  <section class="section" id="opiniones">
+    <div class="container">
+      <header class="section__head">
+        <p class="script">Lo que dicen</p>
+        <h2>Clientes felices</h2>
+      </header>
+      <div class="reviews">
+        <article class="review reveal"><div class="stars">★★★★★</div><p>“El mejor fade que me han hecho. Puntuales con la reserva y el ambiente es top.”</p><b>Diego R.</b></article>
+        <article class="review reveal"><div class="stars">★★★★★</div><p>“Llevé a mi hijo y salió feliz. Atención muy paciente y detallista.”</p><b>Marco T.</b></article>
+        <article class="review reveal"><div class="stars">★★★★★</div><p>“El ritual de barba con toalla caliente vale cada sol. Ya soy cliente fijo.”</p><b>Luis A.</b></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="section section--alt" id="contacto">
+    <div class="container contact">
+      <div class="contact__card">
+        <h3>Horario</h3>
+        <ul class="hours" id="hoursList"></ul>
+      </div>
+      <div class="contact__card">
+        <h3>Encuéntranos</h3>
+        <p class="contact__line">📍 <span id="cAddress"></span></p>
+        <p class="contact__line">📞 <span id="cPhone"></span></p>
+        <div class="socials">
+          <a href="#" id="waLink" target="_blank" rel="noopener" class="btn btn--gold btn--sm">WhatsApp</a>
+          <a href="#" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Instagram</a>
+          <a href="#" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">TikTok</a>
+        </div>
+      </div>
+      <div class="contact__map">
+        <iframe id="mapFrame" title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img src="img/logo.jpg" alt="DDG Barbershop">
+    <p class="script">Nunca es suerte, siempre es Dios.</p>
+    <p>© <span id="year"></span> DDG Barbershop · Todos los derechos reservados</p>
+    <p class="footer__dev">Desarrollado por NexusCode Systems</p>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="#" class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7a10.7 10.7 0 0 1-5.5-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8 1 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.6-.5z"/></svg>
+  </a>
+
+  <!-- Modal confirmación -->
+  <div class="modal" id="confirmModal" aria-hidden="true">
+    <div class="modal__box">
+      <button class="modal__close" data-close>&times;</button>
+      <div class="ticket" id="ticket"></div>
+      <div class="modal__actions">
+        <a href="#" id="ticketWa" target="_blank" rel="noopener" class="btn btn--gold btn--block">Enviar por WhatsApp</a>
+        <button class="btn btn--ghost btn--block" data-close>Listo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal mis reservas -->
+  <div class="modal" id="listModal" aria-hidden="true">
+    <div class="modal__box">
+      <button class="modal__close" data-close>&times;</button>
+      <h3>Mis reservas</h3>
+      <div id="bookingList"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
